@@ -78,11 +78,15 @@
             //inputed deposit number
             const depositAmount= document.getElementById("depositAmount").value;
             const depositNumber= parseFloat(depositAmount);
-
+            if (depositNumber < 0){
+                alert("Incorrect Amount")
+            }
+            else{
             updateSpanText("currentDepositAmount", depositNumber);
             document.getElementById("depositAmount").value = "";
             
             updateSpanText("balanceAmount",depositNumber );
+            }
 
             // //current Balance status
             // const currentBalance= document.getElementById("balanceAmount").innerText;
